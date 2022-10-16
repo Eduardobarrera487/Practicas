@@ -272,6 +272,7 @@ public class Ejercicio3 extends javax.swing.JInternalFrame {
         int salario = Integer.parseInt(txtsalario.getText());
         
         Empleado empleado = new Empleado(id, nombre, apellido, cargo, salario);
+        //Comprobar si hay un empleado, si hay uno, sobreescribir, si no, crear uno.
         if(listaEmpleado.size() > page){
             listaEmpleado.set(page, empleado);
         }else{
