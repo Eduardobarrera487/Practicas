@@ -185,6 +185,20 @@ public class Ejercicio2 extends javax.swing.JInternalFrame {
 
     private void edad_mayorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edad_mayorActionPerformed
         // TODO add your handling code here:
+        String Texto = edades.getText();
+        Texto = Texto.trim();
+        String[] Arreglo = Texto.split("\n");
+        int n = Arreglo.length;
+        int aux;
+        int mayor = Integer.parseInt(Arreglo[0]);
+        for(int i=1; i<n; i++){
+            aux= Integer.parseInt(Arreglo[i]);
+            if(aux > mayor){
+                mayor = aux;
+            }
+            
+        }
+        txtedad_mayor.setText(String.valueOf(mayor));
 
     }//GEN-LAST:event_edad_mayorActionPerformed
 
@@ -196,12 +210,26 @@ public class Ejercicio2 extends javax.swing.JInternalFrame {
 
     private void edad_menorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edad_menorActionPerformed
         // TODO add your handling code here:
+        String Texto = edades.getText();
+        Texto = Texto.trim();
+        String[] Arreglo = Texto.split("\n");
+        int n = Arreglo.length;
+        int aux;
+        int menor = Integer.parseInt(Arreglo[0]);
+        for(int i=1; i<n; i++){
+            aux= Integer.parseInt(Arreglo[i]);
+            if(aux < menor){
+                menor = aux;
+            }
+            
+        }
+        txtedad_menor.setText(String.valueOf(menor));
     }//GEN-LAST:event_edad_menorActionPerformed
 
     @SuppressWarnings("empty-statement")
     private void promedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_promedioActionPerformed
         // TODO add your handling code here:
-        String Texto = txtedad.getText();
+        String Texto = edades.getText();
         Texto = Texto.trim();
         String[] Arreglo = Texto.split("\n");
         int n = Arreglo.length;
@@ -237,4 +265,5 @@ public class Ejercicio2 extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtedad_menor;
     private javax.swing.JTextField txtpromedio;
     // End of variables declaration//GEN-END:variables
+
 }
